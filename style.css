@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+    --purple: #6e3fdb;
+    --background: #1b1912;
+    --text: #cacfec;
+    --translucent: #ffffff13;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "ubuntu", sans-serif;
+    color: var(--text);
+    transition: 0.1s;
+    letter-spacing: 0.5px;
+}
+
+
+body {
+    background: var(--background);
+}
+
+.main-section {
+    margin: 75px;
+    display: flex;
+}
+
+.main-section .card {
+    padding: 40px;
+    border-radius: 20px;
+    background: var(--translucent);
+    text-align: center;
+    margin: 10px;
+}
+
+.card img {
+    border-radius: 999px;
+    width: 200px;
+    height: 200px;
+}
+
+.button {
+    background: var(--purple);
+    padding: 10px 20px;
+    border-radius: 1rem;
+}
+
+h1 {
+    font-size: 128px;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 64px;
+    font-weight: 400;
+    color: var(--purple);
+}
+
+h3 {
+    margin: 30px 0 40px 0;
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.main {
+    width: 100%;
+    text-align: left !important;
+}
+
+.navigation {
+    padding: 20px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+ a:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+#about, #resume, #contact {
+    background: var(--translucent);
+    padding: 40px;
+    margin: 85px;
+    border-radius: 20px;
+    height: 75vh;
+
+}
