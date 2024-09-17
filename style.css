@@ -127,26 +127,3 @@ hr {
         font-size: 20px;
     }
 }
-
-#about {
-    display: flex;
-}
-
-.left {
-    width: 70%;
-}
-
-.right {
-    margin: auto;
-    margin-right: 0;
-}
-
-@media (max-width: 1080px) {
-    #about {
-        display: block;
-    }
-    .left {
-        width: 100%;
-        margin-bottom: 25px;
-    }
-}
