@@ -5,8 +5,12 @@
     padding: 0;
     font-family: "ubuntu", sans-serif;
     color: var(--text);
-    transition: 0.15s;
+    transition: 0.2s !important;
     letter-spacing: 0.5px;
+}
+
+a:hover {
+    cursor: pointer;
 }
 
 body {
@@ -47,7 +51,8 @@ h3 {
 }
 
 p {
-    line-height: 30px;
+    line-height: 32px;
+    letter-spacing: 1px;
 }
 
 a {
@@ -126,4 +131,50 @@ hr {
     h3 {
         font-size: 20px;
     }
+}
+
+.divider {
+    overflow: hidden; 
+    width: calc(100% - 80px); 
+    margin: auto; margin-top: 20px; 
+    margin-bottom: 40px; 
+    text-overflow: '';
+    max-width: 1080px;
+}
+
+.projects, .about, #contact {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.projects div h2:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.projects div h2 {
+    font-size: 28px;
+    position: relative;
+    max-width: calc(100% - 40px);
+}
+
+.projects div h2 span {
+    position: absolute;
+    bottom: -24px;
+    right: -40px;
+}
+
+.invis {
+    transition: 0s !important;
+    max-height: 0px;
+    overflow-y: hidden;
+}
+
+.invis p {
+    margin-left: 15px;
+}
+
+li {
+    list-style: none;
+    font-weight: 500;
 }
