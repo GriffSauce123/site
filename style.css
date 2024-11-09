@@ -17,7 +17,7 @@ h1 {
     padding-left: 20px;
 }
 
-h2 {
+.header h2 {
     padding: 10px 0 0 20px;
 }
 
@@ -111,8 +111,9 @@ body {
     border: solid thin white;
 }
 
-.nav_buttons a:hover {
+.nav_buttons a:hover, .submit:hover {
     background: rgba(255, 255, 255, 0.15);
+    cursor: pointer;
 }
 
 .read_more {
@@ -144,9 +145,51 @@ body {
     margin: auto;
 }
 
-.about p {
+.about p, .contact p {
     padding-bottom: 0;
 }
+
+.contact {
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.submit {
+    background: transparent;
+    width: 100px;
+    padding: 10px;
+    text-align: center;
+    border: solid thin white;
+}
+
+.input {
+    padding: 10px;
+    background: transparent;
+    color: white;
+    border: solid thin white;
+    display: block;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    width: 200px;
+    position: relative;
+}
+
+label {
+    display: flex;
+}
+
+label span {
+    margin-left: auto;
+}
+
+textarea {
+    font-size: 14px;
+    overflow-x: hidden;
+    resize: vertical;
+    max-width: 200px;
+    min-height: 100px;
+} 
 
 @media (max-width: 1280px) {
     .main {
@@ -157,8 +200,8 @@ body {
         grid-template-columns: auto auto;
     }
     .about {
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 }
 
@@ -181,7 +224,7 @@ body {
         padding-left: 0;
         font-size: 20px;
     }
-    p {
+    p, input, textarea {
         font-size: 14px !important;
     }
 }
