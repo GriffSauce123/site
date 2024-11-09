@@ -1,15 +1,18 @@
-const projects = document.querySelector(".projects").children
+const projects = document.querySelector(".main").children
 
 for (let proj of projects) {
-    proj.children[0].addEventListener("click", () => {
-        if (proj.children[1].style.maxHeight != "100%") {
-            proj.children[1].style.maxHeight = "100%"
-            proj.children[0].children[0].children[0].style.rotate = "135deg"
+    proj.children[1].addEventListener("click", () => {
+        if (proj.children[3].style.display != "block") {
+            proj.children[1].style.rotate = "-135deg"
+            proj.children[3].style.display = "block"
+            proj.children[2].style.display = "none"
+
 
         }
         else {
-            proj.children[1].style.maxHeight = "0px"
-            proj.children[0].children[0].children[0].style.rotate = "0deg"
+            proj.children[1].style.rotate = "0deg"
+            proj.children[2].style.display = "block"
+            proj.children[3].style.display = "none"
         }
     })
 }
