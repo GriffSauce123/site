@@ -191,6 +191,14 @@ textarea {
     min-height: 100px;
 } 
 
+form {
+    overflow: hidden;
+}
+
+.pageclip-form__success__message {
+    margin: -20px !important;
+}
+
 @media (max-width: 1280px) {
     .main {
         grid-template-columns: auto auto;
