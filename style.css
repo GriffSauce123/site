@@ -109,8 +109,7 @@ body {
 
 .footer_btns {
     margin: auto;
-    display: grid;
-    grid-template-columns: auto auto;
+    display: flex;
 }
 
 .footer_btns a {
@@ -174,7 +173,8 @@ body {
 }
 
 .contact {
-    width: fit-content;
+    width: calc(100vw - 60px);
+    max-width: 550px;
     margin: auto;
     margin-bottom: 40px;
 }
@@ -189,13 +189,13 @@ body {
 
 .input {
     padding: 10px;
+    width: calc(100% - 22px);
     background: transparent;
     color: white;
     border: solid thin white;
     display: block;
     margin-bottom: 20px;
     margin-top: 5px;
-    width: 240px;
     position: relative;
 }
 
@@ -211,7 +211,7 @@ textarea {
     font-size: 14px;
     overflow-x: hidden;
     resize: vertical;
-    max-width: 240px;
+    width: calc(100% - 22px);
     min-height: 100px;
 } 
 
@@ -262,5 +262,7 @@ form {
     }
     .footer {
         display: flex;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 }
