@@ -1,77 +1,137 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-
 :root {
-    --bg-color: #000000;
-    --text-color: #e1e1e1;
-    --heading-color: #ffffff;
-    --primary-accent: #ffffff;
-    --border-color: #2a2a2a;
-    --card-bg: #0d0d0d;
-    --card-hover-bg: #1a1a1a;
-    --icon-color: #cccccc;
-    --subtle-text: #888888;
-
-    --font-primary: 'Poppins', sans-serif;
-    --transition-speed: 0.3s;
-    --transition-timing: ease-in-out;
+  --bg-color: #f5f0eb;
+  --text-color: #181818;
+  --mono-font: Consolas, "Liberation Mono", Menlo, Monaco, "Courier New", Courier, monospace;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-html {
-    scroll-behavior: smooth;
-    font-size: 16px;
-    background-color: var(--bg-color);
+html, body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--mono-font);
+  width: 100%;
+  min-height: 100vh;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
-body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-family: var(--font-primary);
-    line-height: 1.7;
-    font-weight: 300;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    overflow-x: hidden;
-    opacity: 0;
-    animation: fadeInBody 0.6s var(--transition-timing) 0.1s forwards;
+/* Page Layout Wrapper */
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 1rem;
 }
 
-@keyframes fadeInBody {
-    to {
-        opacity: 1;
-    }
+/* Header Text Grouping */
+.header-group {
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
+.user-name {
+  font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.2rem;
+}
 
-.site-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+.user-title {
+  font-size: clamp(0.95rem, 2vw, 1.25rem);
+  font-weight: 400;
+  opacity: 0.85;
+  margin-bottom: 1rem;
+}
+
+.links-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.nav-link {
+  color: var(--text-color);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-size: 0.85rem;
+  transition: opacity 0.15s ease;
+}
+
+.nav-link:hover {
+  opacity: 0.5;
+}
+
+/* ASCII Portrait Frame */
+.ascii-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Generator Match Rules */
+#output.ascii-art {
+  font-family: var(--mono-font);
+  font-size: clamp(4px, 0.95vw, 11px);
+  line-height: 1em;
+  letter-spacing: 0;
+  white-space: pre;
+  text-align: center; /* Centered individual lines */
+  margin: 0 auto;
+  
+  /* Disable Text Selection */
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Desktop Two-Column Layout Adjustment */
+@media (min-width: 992px) and (min-height: 650px) {
+  .page-container {
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    padding: 25px 5%;
-    /* Increased padding */
-    background-color: rgba(0, 0, 0, 0.7);
-    /* Semi-transparent black */
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border-bottom: 1px solid var(--border-color);
-    z-index: 1000;
-    transition: background-color var(--transition-speed) var(--transition-timing);
+    gap: 4rem;
+    padding: 2rem;
+  }
+
+  .header-group {
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  .links-nav {
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .ascii-container {
+    width: auto;
+  }
 }
 
-.header-content h1 {
-    font-size: 1.5rem;
-    /* 24px */
-    margin: 0;
-    font-weight: 600;
-    letter-spacing: 1px;
+/* Bio Area Below Fold */
+.bio-section {
+  max-width: 680px;
+  margin: 4rem auto 6rem auto;
+  padding: 0 1.5rem;
+}
+
+.bio-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
 }
